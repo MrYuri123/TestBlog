@@ -43,8 +43,6 @@ class MainController
         $post     = $this->post->findPost($id); 
         $comments = $this->comment->getPostsComments($id); 
 
-        $this->comment->countComments(5);
-
         include_once 'view/single/index.php';
     }
 }
