@@ -1,0 +1,17 @@
+<?php
+
+namespace models;
+
+use DB;
+
+abstract class Model 
+{
+    protected $db;
+
+    public function __construct()
+    {
+        $this->db = new DB();
+    }
+
+    abstract public function save();
+}
