@@ -28,11 +28,6 @@ class Comment extends Model
         $stmt->bindParam(':post_id', $post_id);
         $stmt->bindParam(':datetime', time());
             
-        /*try {
-            $stmt->execute();
-        } catch (PDOException $e){
-            die(var_dump($e->getMessage()));
-        }*/
         if ($stmt->execute()) {
             header('Location: /view/posts/success.php');
         } else {
